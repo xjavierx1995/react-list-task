@@ -12,9 +12,11 @@ export const HomePage = () => {
 
   return (
     <div className="home-page">
-      <Button w="25vw" m={2} colorScheme="teal">
-        Task
-      </Button>
+      <Link to={`/tasks`}>
+        <Button w="25vw" m={2} colorScheme="teal">
+          Task
+        </Button>
+      </Link>
       <Link to={`/list`}>
         <Button w="25vw" colorScheme="teal">
           List

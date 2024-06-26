@@ -1,9 +1,17 @@
 import { axiosInstance } from "../plugins/axios";
-import { setList } from "../store/list.store";
+import { ITask, addTask, manageLoading, setList } from "../store/list.store";
 
 export const getListTask = () => {
   return async (dispatch: (action: unknown) => void) => {
-    const { data } = await axiosInstance.get("/elements");
+    dispatch(manageLoading(true));
+    const { data } = await axiosInstance.get<ITask[]>("/elements");
     dispatch(setList(data));
+    dispatch(manageLoading(false));
+  };
+};
+
+export const addListTask = (newTask: ITask) => {
+  return async (dispatch: (action: unknown) => void) => {
+    dispatch(addTask(newTask));
   };
 };

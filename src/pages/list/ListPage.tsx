@@ -4,12 +4,14 @@ import { getListTask } from "../../thunks/list.thunk";
 import { ListItem } from "../../components/ListItem";
 import { AppStore } from "../../store";
 import "./list-page.css";
-import { Button } from "@chakra-ui/react";
+import { Button, Spinner } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 
 export const ListPage = () => {
   const tasks = useSelector((state: AppStore) => state.taskList.tasks);
+
+  const loading = useSelector((state: AppStore) => state.taskList.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,6 +33,16 @@ export const ListPage = () => {
         </Link>
       </div>
       <div className="list-page-content">
+        {loading && (
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="xl"
+          />
+        )}
+
         {tasks.map((task) => (
           <ListItem key={task.id} task={task} />
         ))}
