@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import listReducer from "./list.store";
+import listReducer, { ListSlice } from "./list.store";
+
+export interface AppStore {
+  taskList: ListSlice;
+}
 
 export default configureStore({
   reducer: {
-    /* posts: postsReducer,
-    comments: commentsReducer,
-    users: usersReducer, */
-    list: listReducer,
+    taskList: listReducer,
   },
 });
 

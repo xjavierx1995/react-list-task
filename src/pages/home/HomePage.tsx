@@ -12,12 +12,14 @@ export const HomePage = () => {
 
   return (
     <div className="home-page">
-      <Button w="25vw" m={2} colorScheme="blue">
+      <Button w="25vw" m={2} colorScheme="teal">
         Task
       </Button>
-      <Button w="25vw" colorScheme="blue">
-        <Link to={`/list`}>List</Link>
-      </Button>
+      <Link to={`/list`}>
+        <Button w="25vw" colorScheme="teal">
+          List
+        </Button>
+      </Link>
     </div>
   );
 };

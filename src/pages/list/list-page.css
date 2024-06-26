@@ -1,0 +1,28 @@
+.list-page {
+  width: 100%;
+
+  .list-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    .list-page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .list-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    overflow: auto;
+  }
+}
