@@ -1,17 +1,18 @@
-import { configureStore } from "@reduxjs/toolkit";
-import listReducer, { ListSlice } from "./list.store";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import listReducer from "./list.store";
 
-export interface AppStore {
-  taskList: ListSlice;
-}
-
-export default configureStore({
-  reducer: {
-    taskList: listReducer,
-  },
+export const rootReducer = combineReducers({
+  taskList: listReducer,
 });
 
+export const setupStore = (preloadedState?: Partial<RootState>) => {
+  return configureStore({
+    reducer: rootReducer,
+    preloadedState,
+  });
+};
+
 // Infer the `RootState` and `AppDispatch` types from the store itself
-// export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-// export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore["dispatch"];

@@ -44,19 +44,25 @@ export const AddTaskModal = () => {
 
   return (
     <>
-      <Button mb="12px" onClick={openModal} colorScheme="teal">
+      <Button
+        data-testid="btn-add-task"
+        mb="12px"
+        onClick={openModal}
+        colorScheme="teal"
+      >
         Add task
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent data-testid="modal-add">
           <ModalHeader>Create Task </ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Name</FormLabel>
               <Input
+                data-testid="input-task-name"
                 colorScheme="teal"
                 placeholder="Task name"
                 onChange={onInputChange}
@@ -66,6 +72,7 @@ export const AddTaskModal = () => {
 
           <ModalFooter>
             <Button
+              data-testid="btn-save-task"
               onClick={saveTask}
               isDisabled={!taskName}
               colorScheme="teal"
