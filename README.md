@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# React App (react-list-task)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was made with react, redux, chakra-ui and typescript
 
-Currently, two official plugins are available:
+## Install the dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Start app
+
+```bash
+npm run dev
+```
+
+### Execute tests
+
+```bash
+npm run test
+```
+
+### Execute tests coverage
+
+```bash
+npm run coverage
+```
+
+```bash
+npm run coverage:ui
+```
+
+### Dependencies
+
+This project use:
+
+- Node 20.10.0
+
+### More information
+
+This project was carried out by [Javier Rodriguez](https://github.com/xjavierx1995) for a requested test using React js. If you want to contact me, visit my [LinkedIn](https://www.linkedin.com/in/javier-rodr%C3%ADguez-93a61619a/).
