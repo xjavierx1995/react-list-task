@@ -13,7 +13,7 @@ export interface ITask {
   id: string;
 }
 
-const initialState: ListSlice = {
+export const initialState: ListSlice = {
   tasks: [],
   myTasks: [],
   loading: false,
