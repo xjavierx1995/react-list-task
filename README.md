@@ -4,7 +4,7 @@ This project was made with react, redux, chakra-ui and typescript
 
 ## Demo
 
-[[text](https://preeminent-scone-c8b0bb.netlify.app/)](https://preeminent-scone-c8b0bb.netlify.app/)
+https://preeminent-scone-c8b0bb.netlify.app/
 
 ## Install the dependencies
 
